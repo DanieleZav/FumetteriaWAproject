@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'registration',
     loadChildren: () => import('./pages/registration/registration.module').then( m => m.RegistrationPageModule)
   },
+  {
+    path: 'converter-card',
+    loadChildren: () => import('./pages/converter-card/converter-card.module').then( m => m.ConverterCardPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Converti le tue misurazioni in modo rapido con il nostro sensazionale tool di conversione omega wow!!!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col>
+      <form>
+        <ion-row>
+        <ion-card>
+        <ion-row>       
+          <ion-label>
+            <ion-select placeholder="Scegli unità di misura" id="temp-one">
+              <ion-select-option value="C">°C</ion-select-option>
+              <ion-select-option value="F">°F</ion-select-option>
+            </ion-select> 
+          </ion-label>
+       </ion-row>
+      
+       <ion-row>
+          <ion-label>
+            <ion-input type="number" placeholder="0" id="measure-one"></ion-input>
+          </ion-label>
+       </ion-row>
+
+        <ion-label>
+         <ion-row class="swap-unit-container">
+            <ion-button class="benjamin-button" id="swap">Inverti</ion-button>
+            <div calss="rate" id="rate"></div>
+         </ion-row>
+        </ion-label>
+
+       <ion-row>       
+        <ion-label>
+          <ion-select placeholder="Scegli unità di misura" id="temp-two">
+            <ion-select-option value="C">°C</ion-select-option>
+            <ion-select-option value="F">°F</ion-select-option>
+          </ion-select> 
+        </ion-label>
+     </ion-row>
+    
+     <ion-row>
+      <ion-input type="number" placeholder="0" id="measure-two"></ion-input>
+     </ion-row>
+       
+      </ion-card>
+    </ion-row>
+      </form>
+      </ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+      
+
+
+
+  </ion-grid>
+</ion-content>

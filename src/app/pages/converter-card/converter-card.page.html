@@ -5,55 +5,63 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-col>
-      <form>
         <ion-row>
         <ion-card>
+          <ion-row  id="temperatura">
+            <h1>Temperatura</h1> 
+          </ion-row>
         <ion-row>       
           <ion-label>
-            <ion-select placeholder="Scegli unità di misura" id="temp-one">
+            <ion-select placeholder="Scegli unità di misura" [(ngModel)]="unitaUno">
               <ion-select-option value="C">°C</ion-select-option>
               <ion-select-option value="F">°F</ion-select-option>
-            </ion-select> 
+            </ion-select>
+          </ion-label>
+          <ion-label>
+            <ion-select id="secSelect" placeholder="Scegli unità di misura" [(ngModel)]="unitaDue">
+              <ion-select-option value="C">°C</ion-select-option>
+              <ion-select-option value="F">°F</ion-select-option>
+            </ion-select>
           </ion-label>
        </ion-row>
       
        <ion-row>
           <ion-label>
-            <ion-input type="number" placeholder="0" id="measure-one"></ion-input>
+            <ion-input type="text" placeholder="0" (keyup)="convTempCeToFa()" [(ngModel)]="misuraUno"></ion-input>
+          </ion-label>
+          <ion-label>
+            <ion-input type="text" placeholder="0" (keyup)="convTempFaToCe()" [(ngModel)]="misuraDue"></ion-input>
           </ion-label>
        </ion-row>
-
-        <ion-label>
-         <ion-row class="swap-unit-container">
-            <ion-button class="benjamin-button" id="swap">Inverti</ion-button>
-            <div calss="rate" id="rate"></div>
-         </ion-row>
-        </ion-label>
-
-       <ion-row>       
-        <ion-label>
-          <ion-select placeholder="Scegli unità di misura" id="temp-two">
-            <ion-select-option value="C">°C</ion-select-option>
-            <ion-select-option value="F">°F</ion-select-option>
-          </ion-select> 
-        </ion-label>
-     </ion-row>
-    
-     <ion-row>
-      <ion-input type="number" placeholder="0" id="measure-two"></ion-input>
-     </ion-row>
-       
       </ion-card>
     </ion-row>
-      </form>
-      </ion-col>
-    <ion-col></ion-col>
-    <ion-col></ion-col>
-      
-
-
-
-  </ion-grid>
+    <ion-row>
+      <ion-card>
+        <ion-row id="distanza">
+          <h1>Distanza</h1> 
+        </ion-row>
+        <ion-row>                
+          <ion-label>
+            <ion-select placeholder="Scegli unità di misura" [(ngModel)]="unitaUno">
+              <ion-select-option value="Km">Km</ion-select-option>
+              <ion-select-option value="Mi">Mi</ion-select-option>
+            </ion-select>
+          </ion-label>
+          <ion-label>
+            <ion-select id="fouSelect" placeholder="Scegli unità di misura" [(ngModel)]="unitaDue">
+              <ion-select-option value="Km">Km</ion-select-option>
+              <ion-select-option value="Mi">Mi</ion-select-option>
+            </ion-select>
+          </ion-label>
+       </ion-row>
+       <ion-row>
+         <ion-label>
+          <ion-input type="text" placeholder="0" (keyup)="convDistKmToMi()" [(ngModel)]="misuraUno"></ion-input>
+          </ion-label>
+          <ion-label>
+          <ion-input type="text" placeholder="0" (keyup)="convDistMiToKm()" [(ngModel)]="misuraDue"></ion-input>
+        </ion-label>
+     </ion-row>
+      </ion-card>
+    </ion-row>
 </ion-content>

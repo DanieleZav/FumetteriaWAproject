@@ -34,10 +34,10 @@ convTempFaToCe(){
 convDistKmToMi(){
   if (this.unitaUno === "Km"){ 
     this.unitaDue = "Mi"  
-    return this.misuraDue = (this.misuraUno * 1.6);
+    return this.misuraDue = (this.misuraUno / 1.6);
   } 
   this.unitaDue = "Km"
-  return this.misuraDue = (this.misuraUno / 1.6);
+  return this.misuraDue = (this.misuraUno * 1.6);
 }
 convDistMiToKm(){
   if (this.unitaUno === "Mi"){ 

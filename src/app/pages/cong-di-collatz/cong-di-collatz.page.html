@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confettura di Collatz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-row>
+    <ion-card id="card">
+      <ion-row ><h3>Inserisci qui sotto una coppia di numeri</h3></ion-row>
+      <ion-row>
+        <ion-label>
+          <ion-input type="text" placeholder="i" (keyup)="operation(i)" [(ngModel)]="i"></ion-input>
+        </ion-label>
+        <ion-label>
+          <ion-input type="text" placeholder="j" (keyup)="operation(j)" [(ngModel)]="j" ></ion-input>
+        </ion-label>
+      </ion-row> 
+      
+    </ion-card>
+  </ion-row>
+  <ion-row>
+    <ion-button (click)="calculate()">Calcola</ion-button>
+    <p *ngIf="isOperationFinished">{{i}} {{j}} {{maxLengthCycle.length}}</p>
+  </ion-row>
+  
+</ion-content>

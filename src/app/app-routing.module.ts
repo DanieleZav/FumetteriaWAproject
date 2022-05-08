@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'converter-card',
     loadChildren: () => import('./pages/converter-card/converter-card.module').then( m => m.ConverterCardPageModule)
   },
+  {
+    path: 'cong-di-collatz',
+    loadChildren: () => import('./pages/cong-di-collatz/cong-di-collatz.module').then( m => m.CongDiCollatzPageModule)
+  },
 ];
 
 @NgModule({

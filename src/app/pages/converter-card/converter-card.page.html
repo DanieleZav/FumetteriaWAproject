@@ -12,22 +12,24 @@
           </ion-row>
         <ion-row>       
           <ion-label>
-            <ion-select placeholder="Scegli unità di misura" [(ngModel)]="unitaUno">
+            <ion-select interface="popover" placeholder="Scegli unità di misura" [(ngModel)]="unitaUno">
               <ion-select-option value="C">°C</ion-select-option>
               <ion-select-option value="F">°F</ion-select-option>
+              <ion-select-option value="K">°K</ion-select-option>
             </ion-select>
           </ion-label>
           <ion-label>
-            <ion-select id="secSelect" placeholder="Scegli unità di misura" [(ngModel)]="unitaDue">
+            <ion-select interface="popover" id="secSelect" placeholder="Scegli unità di misura" [(ngModel)]="unitaDue">
               <ion-select-option value="C">°C</ion-select-option>
               <ion-select-option value="F">°F</ion-select-option>
+              <ion-select-option value="K">°K</ion-select-option>
             </ion-select>
           </ion-label>
        </ion-row>
       
        <ion-row>
           <ion-label>
-            <ion-input type="text" placeholder="0" (keyup)="convTempCeToFa()" [(ngModel)]="misuraUno"></ion-input>
+            <ion-input type="text" placeholder="0" (keyup)="convTemp()" [(ngModel)]="misuraUno"></ion-input>
           </ion-label>
           <ion-label>
             <ion-input type="text" placeholder="0" (keyup)="convTempFaToCe()" [(ngModel)]="misuraDue"></ion-input>
@@ -35,20 +37,20 @@
        </ion-row>
       </ion-card>
     </ion-row>
-    <ion-row>
+    <!-- <ion-row>
       <ion-card>
         <ion-row id="distanza">
           <h1>Distanza</h1> 
         </ion-row>
         <ion-row>                
           <ion-label>
-            <ion-select placeholder="Scegli unità di misura" [(ngModel)]="unitaUno">
+            <ion-select interface="popover" placeholder="Scegli unità di misura" [(ngModel)]="unitaUno">
               <ion-select-option value="Km">Km</ion-select-option>
               <ion-select-option value="Mi">Mi</ion-select-option>
             </ion-select>
           </ion-label>
           <ion-label>
-            <ion-select id="fouSelect" placeholder="Scegli unità di misura" [(ngModel)]="unitaDue">
+            <ion-select interface="popover" id="fouSelect" placeholder="Scegli unità di misura" [(ngModel)]="unitaDue">
               <ion-select-option value="Km">Km</ion-select-option>
               <ion-select-option value="Mi">Mi</ion-select-option>
             </ion-select>
@@ -64,4 +66,4 @@
      </ion-row>
       </ion-card>
     </ion-row>
-</ion-content>
+</ion-content> -->

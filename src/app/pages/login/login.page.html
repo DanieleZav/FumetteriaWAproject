@@ -2,9 +2,12 @@
 
 <ion-content>
   <ion-grid>
-    <ion-row class="logo">
-      <img src="assets/icons/logo_devskill@3x.png" />
-    </ion-row>
+    <ion-label>   
+      <h1>Benvenuto in Devskill</h1>
+      <ion-row class="logo">
+    <img src="assets/icons/logo_devskill@3x.png" />
+   </ion-row>
+   </ion-label>
 
     <ion-col>
       <form>
@@ -49,9 +52,9 @@
         <ion-row >
           <ion-col></ion-col>
           <ion-col>
-            <ion-button href="http://localhost:8100/registration">REGISTRATI</ion-button>  
+            <app-pulsante-generico indirizzo="/registration" testo="Registrazione"></app-pulsante-generico>  
           <div class="ion-float-right">
-            <ion-button>LOGIN</ion-button>
+            <app-pulsante-generico testo="Login"></app-pulsante-generico>
             </div>
           </ion-col>
           <ion-col></ion-col>

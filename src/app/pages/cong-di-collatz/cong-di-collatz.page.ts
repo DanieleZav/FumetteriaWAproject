@@ -37,18 +37,20 @@ isOperationFinished:boolean = false;
   }
   calculate(){
     this.maxLengthCycle = [];
-    if (this.i > this.j){
+    if((this.i > 0 && this.i < 10000) && (this.j > 0 && this.j < 10000)){
+      if (this.i > this.j){
       const [firstNumber, secondNumber] = this.swapNumber();                  //destrutturazione
       this.i = firstNumber;
       this.j = secondNumber;
-    }
+      }
 
-    for (let x = this.i; x <= this.j; x++){
+      for (let x = this.i; x <= this.j; x++){
       const lengthCycle = this.operation(x);
       if (lengthCycle.length > this.maxLengthCycle.length){
           this.maxLengthCycle = lengthCycle;
       }
-    }
+      }
     return this.isOperationFinished = true;
+    }
   }
 }

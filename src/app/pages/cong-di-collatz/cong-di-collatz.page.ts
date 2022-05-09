@@ -50,7 +50,7 @@ isOperationFinished:boolean = false;
           this.maxLengthCycle = lengthCycle;
       }
       }
-    return this.isOperationFinished = true;
     }
+    return this.isOperationFinished = true;
   }
 }

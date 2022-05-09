@@ -18,11 +18,11 @@ isOperationFinished:boolean = false;
 
   swapNumber(){
     this.i = Number(this.i) + Number(this.j);
-    console.log("1",this.i); 
+    //console.log("1",this.i); 
     this.j = Number(this.i) - Number(this.j);
-    console.log("2",this.j); 
+    //console.log("2",this.j); 
     this.i = Number(this.i) - Number(this.j);
-    console.log("3",this.i);
+    //console.log("3",this.i);
     return [this.i, this.j]
   }
 
